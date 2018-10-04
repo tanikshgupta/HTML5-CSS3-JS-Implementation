@@ -23,9 +23,18 @@ div.supic{
 h1#content{
 	margin: 0;
 
-	background-color: red;
+	
 	float: right;
 	border: 1px solid black;
+}
+h1.sus{
+	background-color: #ffcc66;
+}
+h1.bee{
+	background-color: #ff8080;
+}
+h1.chi{
+	background-color:  #ffcccc;
 }
 p{
 	clear:both;
@@ -35,7 +44,7 @@ body {
 
 }
 #content {
-  
+  padding: 5px;
 }
 
 
@@ -45,11 +54,13 @@ body {
   	margin-left: 10px;*/
   	padding: 5px;
     width: 33.33%;
-    
+    display: table-cell;
     float: left;
   }
 
-  
+  .row{
+  	display: table-cell;
+  }
 }
 
 @media (max-width: 991px) and (min-width: 768px) {

@@ -1,6 +1,6 @@
-(function(){
+(function () {
 	'use strict';
-	angular.module('LunchCheck',[])
+	angular.module('LunchCheck' , [])
 	.controller('LunchCheckController', LunchCheckController);
 
 	LunchCheckController.$inject = ['$scope'];
@@ -9,7 +9,11 @@
 		$scope.message = "";
 		$scope.name="";
 		$scope.selectMessage=function() {
-			//console.log($scope.name);
+			console.log($scope.name);
+			if($scope.name==""){
+				$scope.message = "Please enter data first";
+				return;
+			}
 			var num=countItems($scope.name);
 			if(num<=3)
 				$scope.message="Enjoy!";
@@ -20,11 +24,13 @@
 
 		function countItems(string) {
 			var total = 0;
-   	        for (var i = 0; i < string.length; i++) {
-                if(string[i]==',')
-                	total+=1;
-    		}
-    		total+=1; //one last item is left 
+			var words = string.split(',');
+   	        //for (var i = 0; i < string.length; i++) {
+            //    if(string[i]==',')
+            //    	total+=1;
+    		//}
+    		//total+=1; 
+    		total=words.length;
     		return total;
 		};
 	};

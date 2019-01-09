@@ -9,7 +9,7 @@
 		$scope.message = "";
 		$scope.name="";
 		$scope.selectMessage=function() {
-			console.log($scope.name);
+			
 			if($scope.name==""){
 				$scope.message = "Please enter data first";
 				return;

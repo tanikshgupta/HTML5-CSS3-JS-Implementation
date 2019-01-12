@@ -9,9 +9,10 @@
 		$scope.message = "";
 		$scope.name="";
 		$scope.selectMessage=function() {
-			
+
 			if($scope.name==""){
 				$scope.message = "Please enter data first";
+				//$scope.message = $scope.message.fontcolor("red");
 				return;
 			}
 			var num=countItems($scope.name);

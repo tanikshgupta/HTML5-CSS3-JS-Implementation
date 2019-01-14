@@ -53,7 +53,7 @@
 
 		service.getItemsBought=function () {
 			return bought;
-		}
+		};
 
 	}
 

@@ -14,7 +14,7 @@
 		buy.toBuy = ShoppingListCheckOffService.getItemsToBuy();
 		
 		buy.transfer = function (itemIndex) {
-			console.log("ksjdcnasl");
+		
     		ShoppingListCheckOffService.transfer(itemIndex);
   		};
 	}
@@ -41,7 +41,7 @@
 		var bought=[];
 
 		service.transfer=function (itemIndex) {
-			console.log("Function is called");
+			
 			var temp=toBuy[itemIndex];
 			toBuy.splice(itemIndex,1);
 			bought.push(temp);

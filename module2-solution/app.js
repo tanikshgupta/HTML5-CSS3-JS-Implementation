@@ -14,8 +14,7 @@
 		buy.toBuy = ShoppingListCheckOffService.getItemsToBuy();
 		
 		buy.transfer = function (itemIndex) {
-		
-    		ShoppingListCheckOffService.transfer(itemIndex);
+		ShoppingListCheckOffService.transfer(itemIndex);
   		};
 	}
 
@@ -41,8 +40,7 @@
 		var bought=[];
 
 		service.transfer=function (itemIndex) {
-			
-			var temp=toBuy[itemIndex];
+		var temp=toBuy[itemIndex];
 			toBuy.splice(itemIndex,1);
 			bought.push(temp);
 		};

@@ -31,8 +31,10 @@ function NarrowItDownDirectiveController() {
 	cntrl.nothing = function () {
     	if(cntrl.foundItem.length==0)
     		return true;
-    	if(cntrl.search==="")
-    		return true;
+    	if(cntrl.search===""){
+    		cntrl.foundItem=[];
+    		return true;}
+    	
 
     return false;
   };
@@ -45,16 +47,19 @@ function NarrowItDownController(MenuSearchService) {
 	var ctrl=this;
 	ctrl.searchTerm="";
 	
+
+
 	ctrl.callFunc = function () {
-	 console.log("callFunc is called");
+	 //console.log("callFunc is called");
 	 //ctrl.found=MenuSearchService.getMatchedMenuItems(ctrl.searchTerm);
 	 //console.log("ctrl.found is :");
 	 //console.log(ctrl.foundItems);
+	 
 	 var promise=MenuSearchService.getMatchedMenuItems(ctrl.searchTerm);
 	 promise.then(function (result) {
 	 	ctrl.found=result;
-	 	console.log("ctrl.found is :");
-	 	console.log(ctrl.found);
+	 	//console.log("ctrl.found is :");
+	 	//console.log(ctrl.found);
 
 	 });
 

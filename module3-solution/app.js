@@ -54,7 +54,7 @@ function NarrowItDownController(MenuSearchService) {
 	 //ctrl.found=MenuSearchService.getMatchedMenuItems(ctrl.searchTerm);
 	 //console.log("ctrl.found is :");
 	 //console.log(ctrl.foundItems);
-	 
+
 	 var promise=MenuSearchService.getMatchedMenuItems(ctrl.searchTerm);
 	 promise.then(function (result) {
 	 	ctrl.found=result;
@@ -78,11 +78,11 @@ function MenuSearchService( $http , ApiBasePath) {
 	var service=this;
 	//service.foundItems={};
 	service.getMatchedMenuItems=function(searchTerm) {
-		console.log("getMatchedMenuItems is called");
+		//console.log("getMatchedMenuItems is called");
 		return $http({method: "GET",
                       url: "https://davids-restaurant.herokuapp.com/menu_items.json"
                   	}).then(function (result) {
-					console.log(result.data);
+					//console.log(result.data);
 
 					service.foundItems=result.data.menu_items;
 					//console.log("Service.foundItems is : "+ service.foundItems);

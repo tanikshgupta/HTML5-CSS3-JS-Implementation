@@ -1,9 +1,4 @@
-//Note for reviewer :
-//I am getting an error in console that length is undefined
-//But the functionality is working fine ,ie, if length becomes 0
-//the error message pops up . ALSO , this is not among the evaluating criteria.
-//I so assume , it will not affect my grades as the functionality works fine
-//Thanks 
+
 ( function () {
 	'use strict';
 	
